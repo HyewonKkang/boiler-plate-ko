@@ -1,8 +1,8 @@
 ## boiler-plate-ko
 #### _1. Project <boiler-plate-ko>_
-  In information technology, a boilerplate is a unit of writing that can be reused over and over without change. By extension, the idea is sometimes applied to reusable programming, as in "boilerplate code."
+  A boilerplate is a unit of writing that can be reused over and over without change. By extension, the idea is sometimes applied to reusable programming, as in "boilerplate code."
 #### _2. Project Info._
-* part1. Node JS
+* Section1. Node JS
   - Node JS : excutes JavaScript code outside of a browser
   - Express JS : a web application framework for Node.js
   - connected MongoDB
@@ -16,7 +16,12 @@
   - Login, Create token with Bcrypt
   - Create auth route (decode token with JWT)
   - Logout (delete user's token)
-  
-#### _3. References_
+ * Section2. React JS
+    - register, login, auth, logout
+#### 3. How to use
+  1. Create dev.js file in config folder.
+  2. Put mongoDB informations into dev.js file.
+  3. Enter " npm install " in root directory. (Download Backend dependencies)
+  4. Enter " npm install " in client directory. (Download Frontend dependencies)
+#### _4. References_
   * Inflearn URL : https://www.inflearn.com/course/%EB%94%B0%EB%9D%BC%ED%95%98%EB%A9%B0-%EB%B0%B0%EC%9A%B0%EB%8A%94-%EB%85%B8%EB%93%9C-%EB%A6%AC%EC%95%A1%ED%8A%B8-%EA%B8%B0%EB%B3%B8/
-  * README.md => Diagram.html, Diagram.xml in lecture
