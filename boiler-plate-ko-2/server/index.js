@@ -1,7 +1,7 @@
 const express = require('express') // 다운받은 express 모듈 가져옴
 const app = express() // express app 생성
 const port = 5000
-const { auth } = require('../middleware/auth');
+const { auth } = require('./middleware/auth');
 const { User } = require('./models/User')
 const cookieParser = require('cookie-parser')
 const config = require('./config/key')
