@@ -1,7 +1,7 @@
 const express = require('express') // 다운받은 express 모듈 가져옴
 const app = express() // express app 생성
 const port = 5000
-const { auth } = require('./middleware/auth');
+const { auth } = require('../middleware/auth');
 const { User } = require('./models/User')
 const cookieParser = require('cookie-parser')
 const config = require('./config/key')
@@ -23,6 +23,7 @@ mongoose.connect(config.mongoURI, {
 app.get('/', (req, res) => { // root directory
   res.send('Hello World!')
 })
+
 
 app.post('/register', (req, res) => { // callback function = (req, res)
 
@@ -52,7 +53,7 @@ app.post('/login', (req, res) => {
       if(!isMatch) return res.json({loginSuccess: false, message: "비밀번호가 틀렸습니다."})
 
       // 비밀번호까지 맞다면 토큰을 생성
-      user.generateToken((err, user) => { // User.js의 generateToken()에서 user 전달받음
+      user.generateToken((err, user) => { // User.js의 generateToken()에서 user  전달받음
         if (err) return res.status(400).send(err);
 
         // 토큰을 저장한다. 어디에 ? 쿠키 / 로컬스토리지 등 여러 방법 존재
@@ -91,5 +92,5 @@ app.get('/api/users/logout', auth, (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`Example app listening at ${port}`)
 })
